@@ -1,12 +1,10 @@
 import { DataService } from '../services/data.service';
 import { Observable } from 'rxjs/Observable';
-import { Scheduler } from 'rxjs/Scheduler';
 import { Injectable } from '@angular/core';
 import { filter, map } from 'rxjs/operators';
 
 @Injectable()
 export class ExerciseOneService {
-  scheduler: Scheduler;
 
   constructor(private dataService: DataService) {
   }
