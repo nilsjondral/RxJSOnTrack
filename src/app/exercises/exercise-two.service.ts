@@ -24,42 +24,42 @@ export class ExerciseTwoService {
   countAllTheValues(): Observable<number> {
     const numbers$: Observable<number> = this.dataService.getStreamOfNumbers();
 
-    return numbers$.pipe(scan((acc, curr) => acc + curr, 0));
+    return numbers$;
   }
 
   // TODO: Filter out all the duplicate events
   filterOutDuplicateValues(): Observable<string> {
     const letters$: Observable<string> = this.dataService.getStreamOfLetters();
 
-    return letters$.pipe(distinct());
+    return letters$;
   }
 
   // TODO: filter out all the immediate duplicate events
   filterOutImmediateDuplicateValues(): Observable<string> {
     const letters$: Observable<string> = this.dataService.getStreamOfLetters();
 
-    return letters$.pipe(distinctUntilChanged());
+    return letters$;
   }
 
   // TODO: only allow the first 5 events and then stop listening
   onlyTakeTheFirst5Events(): Observable<string> {
     const letters$: Observable<string> = this.dataService.getStreamOfLetters();
 
-    return letters$.pipe(take(5));
+    return letters$;
   }
 
   // TODO: Make sure the stream starts with the string event 'x'
   makeSureTheStreamBeginsWithX(): Observable<string> {
     const letters$: Observable<string> = this.dataService.getStreamOfLetters();
 
-    return letters$.pipe(startWith('x'));
+    return letters$;
   }
 
   // TODO: Ignore the first five events of the observable
   ignoreTheFirstFiveValues(): Observable<string> {
     const letters$: Observable<string> = this.dataService.getStreamOfLetters();
 
-    return letters$.pipe(skip(5));
+    return letters$;
   }
 
   // TODO: Debounce the values passed with 20ms
@@ -68,7 +68,7 @@ export class ExerciseTwoService {
   debounceTheValues(): Observable<string> {
     const letters$: Observable<string> = this.dataService.getStreamOfLetters();
 
-    return letters$.pipe(debounceTime(20, this.scheduler));
+    return letters$;
   }
 
   // TODO: debounce the values with 20ms,
@@ -78,10 +78,7 @@ export class ExerciseTwoService {
   // TODO: return the newly created observable
   // TODO: This is a typical stream you could for an auto complete, hence the method name
   autoComplete(searchTerm$: Observable<string>) {
-    return searchTerm$.pipe(
-      debounceTime(20, this.scheduler),
-      distinctUntilChanged(),
-      filter(x => x.length > 1));
+    return searchTerm$;
   }
 
 }
