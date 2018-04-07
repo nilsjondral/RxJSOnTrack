@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "rx-advanced-workshop-exercises"
+    "name": "onTrackExercises"
   },
   "apps": [
     {

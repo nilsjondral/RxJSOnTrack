@@ -1,5 +1,5 @@
 {
-  "name": "rx-advanced-workshop-exercises",
+  "name": "onTrackExercises",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -22,12 +22,12 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "core-js": "^2.4.1",
+    "core-js": "^2.5.4",
     "jest": "^21.2.1",
-    "jest-preset-angular": "^4.0.1",
-    "rxjs": "^5.4.2",
-    "rxjs-marbles": "^2.1.0",
-    "zone.js": "^0.8.14"
+    "jest-preset-angular": "^4.0.2",
+    "rxjs": "^5.5.8",
+    "rxjs-marbles": "^2.3.3",
+    "zone.js": "^0.8.25"
   },
   "devDependencies": {
     "@angular/cli": "1.4.5",
@@ -36,7 +36,7 @@
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/jest": "20.0.8",
-    "@types/node": "~6.0.60",
+    "@types/node": "^6.0.104",
     "codelyzer": "~3.2.0",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
