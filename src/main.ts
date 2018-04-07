@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+import 'rx-imports';
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));
