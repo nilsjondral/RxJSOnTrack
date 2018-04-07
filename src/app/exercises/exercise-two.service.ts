@@ -2,16 +2,6 @@ import { DataService } from '../services/data.service';
 import { Observable } from 'rxjs/Observable';
 import { Scheduler } from 'rxjs/Scheduler';
 import { Injectable } from '@angular/core';
-import {
-  filter,
-  scan,
-  distinct,
-  distinctUntilChanged,
-  take,
-  startWith,
-  skip,
-  debounceTime
-} from 'rxjs/operators';
 
 @Injectable()
 export class ExerciseTwoService {
