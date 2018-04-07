@@ -80,5 +80,4 @@ export class ExerciseTwoService {
   autoComplete(searchTerm$: Observable<string>) {
     return searchTerm$;
   }
-
 }
