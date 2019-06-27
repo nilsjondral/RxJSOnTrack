@@ -208,7 +208,30 @@ describe('service: ExerciseTwoService', () => {
     }));
   });
 
-  describe('on autoComplete', () => {
+  describe('on autoComplete without filter', () => {
+    it('should take the stream and debounce it, filter out immediate duplicates and filter out to short ones', marbles((m) => {
+      const values = {
+        a: 'i',
+        b: 'ip',
+        c: 'iph',
+        d: 'ipho',
+        e: 'ipho',
+        f: 'iph',
+        g: 'ip',
+        h: 'i',
+      };
+      const searchTerm$ = m.cold('---a-b---c--------d-e---f---g---h', values);
+      const result =             '-------b---c----------e---f---g---h';
+
+      service.scheduler = m.scheduler;
+
+      const result$ = service.autoComplete(searchTerm$);
+
+      m.expect(result$).toBeObservable(result, values);
+    }));
+  });
+
+  describe('on autoComplete with filter', () => {
     it('should take the stream and debounce it, filter out immediate duplicates and filter out to short ones', marbles((m) => {
       const values = {
         a: 'i',
@@ -225,7 +248,7 @@ describe('service: ExerciseTwoService', () => {
 
       service.scheduler = m.scheduler;
 
-      const result$ = service.autoComplete(searchTerm$);
+      const result$ = service.autoCompleteWithFilter(searchTerm$);
 
       m.expect(result$).toBeObservable(result, values);
     }));

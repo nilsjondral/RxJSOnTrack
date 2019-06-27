@@ -64,10 +64,18 @@ export class ExerciseTwoService {
   // TODO: debounce the values with 20ms,
   // TODO: pass the scheduler (this.scheduler) as second argument to the operator
   // TODO: remove immediate duplicates
+  // TODO: return the newly created observable
+  autoComplete(searchTerm$: Observable<string>) {
+    return searchTerm$;
+  }
+
+  // TODO: debounce the values with 20ms,
+  // TODO: pass the scheduler (this.scheduler) as second argument to the operator
+  // TODO: remove immediate duplicates
   // TODO: filter out the strings with a length smaller than two
   // TODO: return the newly created observable
   // TODO: This is a typical stream you could for an auto complete, hence the method name
-  autoComplete(searchTerm$: Observable<string>) {
+  autoCompleteWithFilter(searchTerm$: Observable<string>) {
     return searchTerm$;
   }
 }
