@@ -21,8 +21,9 @@ export class ExerciseThreeService {
   }
 
   // TODO: finish the auto complete so that we actually perform a backend call every time the searchTerm changes.
-  // TODO: Avoid having unnecessary backend calls ( time = 20ms, no searchTerms of 1 character or shorter )
-  // TODO: (use the dataService.getBackendData for the backend call)
+  // TODO: first Avoid having unnecessary backend calls ( time = 20ms, no searchTerms of 1 character or shorter )
+  // TODO: second only act when the searchterm changes
+  // TODO: third (use the dataService.getBackendData for the backend call)
   autoComplete(searchTerm$: Observable<string>) {
     return searchTerm$
       .pipe(
